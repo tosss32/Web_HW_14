@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to Contact_book’s documentation! &#8212; Contact_book Doctor Who documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=d6b70624"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Contact_book Doctor Who documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to Contact_book’s documentation!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="welcome-to-contact-book-s-documentation">
+<h1>Welcome to Contact_book’s documentation!<a class="headerlink" href="#welcome-to-contact-book-s-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-repo.contacts">
+<span id="contact-book-s-repositories-contacts"></span><h1>Contact_book’s repositories Contacts<a class="headerlink" href="#module-repo.contacts" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repo.contacts.</span></span><span class="sig-name descname"><span class="pre">ContactRepo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.contacts.ContactRepo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Модуль для роботи з репозиторієм контактів.</p>
+<p>Атрибути:
+- db: Екземпляр сесії бази даних.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.contacts.ContactRepo.create" title="Link to this definition">¶</a></dt>
+<dd><p>Створити новий контакт.</p>
+<p>Повертає:
+Новий контакт.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo.delete_by_id">
+<span class="sig-name descname"><span class="pre">delete_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.contacts.ContactRepo.delete_by_id" title="Link to this definition">¶</a></dt>
+<dd><p>Видалити контакт по id.</p>
+<p>Повертає:
+Контакт по id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo.get_all">
+<span class="sig-name descname"><span class="pre">get_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.contact.ContactDB" title="models.contact.ContactDB"><span class="pre">ContactDB</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#repo.contacts.ContactRepo.get_all" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати всі контакти.</p>
+<p>Повертає:
+Всі контакти з БД.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo.get_by_id">
+<span class="sig-name descname"><span class="pre">get_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.contacts.ContactRepo.get_by_id" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати контакт по id.</p>
+<p>Повертає:
+Контакт по id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo.get_upcoming_birthdays">
+<span class="sig-name descname"><span class="pre">get_upcoming_birthdays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.contact.ContactDB" title="models.contact.ContactDB"><span class="pre">ContactDB</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#repo.contacts.ContactRepo.get_upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd><p>Майбутні дні народження.</p>
+<p>Повертає:
+Список днів народження на наступному тижні.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo.search_contacts">
+<span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.contact.ContactDB" title="models.contact.ContactDB"><span class="pre">ContactDB</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#repo.contacts.ContactRepo.search_contacts" title="Link to this definition">¶</a></dt>
+<dd><p>Пошук контакту.</p>
+<p>Повертає:
+Контакт за запитом.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.contacts.ContactRepo.update_by_id">
+<span class="sig-name descname"><span class="pre">update_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#schemas.contact.ContactUpdate" title="schemas.contact.ContactUpdate"><span class="pre">ContactUpdate</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.contacts.ContactRepo.update_by_id" title="Link to this definition">¶</a></dt>
+<dd><p>Оновити контакт по id.</p>
+<p>Повертає:
+Оновлений контакт по id.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-repo.user">
+<span id="contact-book-s-repositories-user"></span><h1>Contact_book’s repositories User<a class="headerlink" href="#module-repo.user" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="repo.user.UserRepo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repo.user.</span></span><span class="sig-name descname"><span class="pre">UserRepo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Модуль для роботи з репозиторієм користувачів.</p>
+<p>Атрибути:
+- db: Екземпляр сесії бази даних.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.user.UserRepo.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo.create" title="Link to this definition">¶</a></dt>
+<dd><p>Створити нового користувача.</p>
+<p>Повертає:
+Нового користувача.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.user.UserRepo.generate_salt">
+<span class="sig-name descname"><span class="pre">generate_salt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo.generate_salt" title="Link to this definition">¶</a></dt>
+<dd><p>Генерація солі</p>
+<p>Повертає:
+Сіль.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.user.UserRepo.get_by_email">
+<span class="sig-name descname"><span class="pre">get_by_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo.get_by_email" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати користувача по email</p>
+<p>Повертає:
+Користувача.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.user.UserRepo.get_by_username">
+<span class="sig-name descname"><span class="pre">get_by_username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo.get_by_username" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати користувача по імю.</p>
+<p>Повертає:
+Користувача.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.user.UserRepo.get_user_check_pass">
+<span class="sig-name descname"><span class="pre">get_user_check_pass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo.get_user_check_pass" title="Link to this definition">¶</a></dt>
+<dd><p>Перевірка пароля користувача</p>
+<p>Повертає:
+Користувача, якщо пароль вірний.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.user.UserRepo.hash_password">
+<span class="sig-name descname"><span class="pre">hash_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">salt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo.hash_password" title="Link to this definition">¶</a></dt>
+<dd><p>Функція для хешування паролю з використанням солі</p>
+<p>Повертає:
+Захешований пароль та сіль.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repo.user.UserRepo.verify_password">
+<span class="sig-name descname"><span class="pre">verify_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plain_password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hashed_password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">salt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repo.user.UserRepo.verify_password" title="Link to this definition">¶</a></dt>
+<dd><p>Верифікація паролю</p>
+<p>Повертає:
+True, якщо пароль вірний.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-schemas.contact">
+<span id="contact-book-s-schemas-contact"></span><h1>Contact_book’s schemas Contact<a class="headerlink" href="#module-schemas.contact" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.contact.Contact">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">schemas.contact.</span></span><span class="sig-name descname"><span class="pre">Contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phone_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">birthday</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schemas.contact.Contact" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Базова схема контактів</p>
+<p>Атрибути:
+- id: Ідентифікатор в БД
+- first_name: Ім’я контакту.
+- last_name: Прізвище контакту.
+- email: Email контакту.
+- phone_number: Номер телефону контакту.
+- birthday: День народження контакту.
+- additional_data: Додаткові дані про контакт.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.contact.Contact.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#schemas.contact.Contact.Config" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.Config.from_attributes">
+<span class="sig-name descname"><span class="pre">from_attributes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#schemas.contact.Contact.Config.from_attributes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.additional_data">
+<span class="sig-name descname"><span class="pre">additional_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.contact.Contact.additional_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.birthday">
+<span class="sig-name descname"><span class="pre">birthday</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#schemas.contact.Contact.birthday" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.contact.Contact.email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.first_name">
+<span class="sig-name descname"><span class="pre">first_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.contact.Contact.first_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#schemas.contact.Contact.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.last_name">
+<span class="sig-name descname"><span class="pre">last_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.contact.Contact.last_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.Contact.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.contact.Contact.phone_number" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.contact.ContactCreate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">schemas.contact.</span></span><span class="sig-name descname"><span class="pre">ContactCreate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phone_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">birthday</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schemas.contact.ContactCreate" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Схема для створення контактів</p>
+<p>Атрибути:
+- first_name: Ім’я контакту.
+- last_name: Прізвище контакту.
+- email: Email контакту.
+- phone_number: Номер телефону контакту.
+- birthday: День народження контакту.
+- additional_data: Додаткові дані про контакт.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactCreate.additional_data">
+<span class="sig-name descname"><span class="pre">additional_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactCreate.additional_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactCreate.birthday">
+<span class="sig-name descname"><span class="pre">birthday</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactCreate.birthday" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactCreate.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactCreate.email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactCreate.first_name">
+<span class="sig-name descname"><span class="pre">first_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.contact.ContactCreate.first_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactCreate.last_name">
+<span class="sig-name descname"><span class="pre">last_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactCreate.last_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactCreate.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.contact.ContactCreate.phone_number" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.contact.ContactUpdate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">schemas.contact.</span></span><span class="sig-name descname"><span class="pre">ContactUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phone_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">birthday</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schemas.contact.ContactUpdate" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Схема для оновлення контактів</p>
+<p>Атрибути:
+- first_name: Ім’я контакту.
+- last_name: Прізвище контакту.
+- email: Email контакту.
+- phone_number: Номер телефону контакту.
+- birthday: День народження контакту.
+- additional_data: Додаткові дані про контакт.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactUpdate.additional_data">
+<span class="sig-name descname"><span class="pre">additional_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactUpdate.additional_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactUpdate.birthday">
+<span class="sig-name descname"><span class="pre">birthday</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactUpdate.birthday" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactUpdate.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactUpdate.email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactUpdate.first_name">
+<span class="sig-name descname"><span class="pre">first_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactUpdate.first_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactUpdate.last_name">
+<span class="sig-name descname"><span class="pre">last_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactUpdate.last_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.contact.ContactUpdate.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#schemas.contact.ContactUpdate.phone_number" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-schemas.user">
+<span id="contact-book-s-schemas-user"></span><h1>Contact_book’s schemas User<a class="headerlink" href="#module-schemas.user" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.user.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">schemas.user.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_verified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar_public_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schemas.user.User" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Базова схема користувачів</p>
+<p>Атрибути:
+- username: Логін користувача
+- email: Email користувача.
+- password: Пароль користувача.
+- is_verified: Чи верифікований користувач.
+- avatar_public_id: ID аватару.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.user.User.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#schemas.user.User.Config" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.User.Config.from_attributes">
+<span class="sig-name descname"><span class="pre">from_attributes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#schemas.user.User.Config.from_attributes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.User.avatar_public_id">
+<span class="sig-name descname"><span class="pre">avatar_public_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.user.User.avatar_public_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.User.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.user.User.email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.User.is_verified">
+<span class="sig-name descname"><span class="pre">is_verified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#schemas.user.User.is_verified" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.User.password">
+<span class="sig-name descname"><span class="pre">password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.user.User.password" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.User.username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.user.User.username" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.user.UserUpdate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">schemas.user.</span></span><span class="sig-name descname"><span class="pre">UserUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schemas.user.UserUpdate" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.UserUpdate.avatar_url">
+<span class="sig-name descname"><span class="pre">avatar_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.user.UserUpdate.avatar_url" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="schemas.user.UserVerification">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">schemas.user.</span></span><span class="sig-name descname"><span class="pre">UserVerification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schemas.user.UserVerification" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="schemas.user.UserVerification.token">
+<span class="sig-name descname"><span class="pre">token</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#schemas.user.UserVerification.token" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-models.contact">
+<span id="contact-book-s-models-contact"></span><h1>Contact_book’s models Contact<a class="headerlink" href="#module-models.contact" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.contact.ContactDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.contact.</span></span><span class="sig-name descname"><span class="pre">ContactDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.contact.ContactDB" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.base.BaseModel" title="models.base.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
+<p>Модель контакту.</p>
+<p>Атрибути:
+- first_name: Ім’я контакту.
+- last_name: Прізвище контакту.
+- email: Email контакту.
+- phone_number: Номер телефону контакту.
+- birthday: День народження контакту.
+- additional_data: Додаткові дані про контакт.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.contact.ContactDB.additional_data">
+<span class="sig-name descname"><span class="pre">additional_data</span></span><a class="headerlink" href="#models.contact.ContactDB.additional_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.contact.ContactDB.birthday">
+<span class="sig-name descname"><span class="pre">birthday</span></span><a class="headerlink" href="#models.contact.ContactDB.birthday" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.contact.ContactDB.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#models.contact.ContactDB.email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.contact.ContactDB.first_name">
+<span class="sig-name descname"><span class="pre">first_name</span></span><a class="headerlink" href="#models.contact.ContactDB.first_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.contact.ContactDB.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#models.contact.ContactDB.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.contact.ContactDB.last_name">
+<span class="sig-name descname"><span class="pre">last_name</span></span><a class="headerlink" href="#models.contact.ContactDB.last_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.contact.ContactDB.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><a class="headerlink" href="#models.contact.ContactDB.phone_number" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-models.users">
+<span id="contact-book-s-models-users"></span><h1>Contact_book’s models Users<a class="headerlink" href="#module-models.users" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.users.UsertDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.users.</span></span><span class="sig-name descname"><span class="pre">UsertDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.users.UsertDB" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.base.BaseModel" title="models.base.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
+<p>Модель користувача.</p>
+<p>Атрибути:
+- username: Логін користувача.
+- email: Email користувача для аутентифікації.
+- password: Пароль користувача.
+- salt: Сіль до паролю користувача.
+- avatar_public_id: ID аватару користовача.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.users.UsertDB.avatar_public_id">
+<span class="sig-name descname"><span class="pre">avatar_public_id</span></span><a class="headerlink" href="#models.users.UsertDB.avatar_public_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.users.UsertDB.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#models.users.UsertDB.email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.users.UsertDB.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#models.users.UsertDB.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.users.UsertDB.password">
+<span class="sig-name descname"><span class="pre">password</span></span><a class="headerlink" href="#models.users.UsertDB.password" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.users.UsertDB.salt">
+<span class="sig-name descname"><span class="pre">salt</span></span><a class="headerlink" href="#models.users.UsertDB.salt" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.users.UsertDB.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#models.users.UsertDB.username" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-models.base">
+<span id="contact-book-s-models-base"></span><h1>Contact_book’s models Base<a class="headerlink" href="#module-models.base" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.base.BaseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.base.</span></span><span class="sig-name descname"><span class="pre">BaseModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.BaseModel" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></p>
+<p>Базова модель.</p>
+<p>Атрибути:
+- id: Ідентифікаційний номер.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.base.BaseModel.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Column(None,</span> <span class="pre">Integer(),</span> <span class="pre">table=None,</span> <span class="pre">primary_key=True,</span> <span class="pre">nullable=False)</span></em><a class="headerlink" href="#models.base.BaseModel.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services.contacts">
+<span id="contact-book-s-services-contacts"></span><h1>Contact_book’s services Contacts<a class="headerlink" href="#module-services.contacts" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.contacts.ContactService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.contacts.</span></span><span class="sig-name descname"><span class="pre">ContactService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.contacts.ContactService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Сервіс для роботи з контактами.</p>
+<p>Атрибути:
+- db: Екземпляр сесії бази даних.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.contacts.ContactService.create_new">
+<span class="sig-name descname"><span class="pre">create_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">create_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#schemas.contact.ContactCreate" title="schemas.contact.ContactCreate"><span class="pre">ContactCreate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a></span></span><a class="headerlink" href="#services.contacts.ContactService.create_new" title="Link to this definition">¶</a></dt>
+<dd><p>Створити новий контакт.</p>
+<p>Повертає:
+Створений контакт.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.contacts.ContactService.delete_contact">
+<span class="sig-name descname"><span class="pre">delete_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.contacts.ContactService.delete_contact" title="Link to this definition">¶</a></dt>
+<dd><p>Видалення контакту.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.contacts.ContactService.get_all_contacts">
+<span class="sig-name descname"><span class="pre">get_all_contacts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#services.contacts.ContactService.get_all_contacts" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати всі контакти.</p>
+<p>Повертає:
+Список всіх контактів.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.contacts.ContactService.get_by_id">
+<span class="sig-name descname"><span class="pre">get_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a></span></span><a class="headerlink" href="#services.contacts.ContactService.get_by_id" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати контакт за ID.</p>
+<p>Повертає:
+Контакт.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.contacts.ContactService.search_contacts">
+<span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#services.contacts.ContactService.search_contacts" title="Link to this definition">¶</a></dt>
+<dd><p>Пошук контакту.</p>
+<p>Повертає:
+Контакт, який відповідає запиту.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.contacts.ContactService.upcoming_birthdays">
+<span class="sig-name descname"><span class="pre">upcoming_birthdays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#services.contacts.ContactService.upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd><p>Найближчі дні народження.</p>
+<p>Повертає:
+Список днів народження.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.contacts.ContactService.update_contact">
+<span class="sig-name descname"><span class="pre">update_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#schemas.contact.ContactUpdate" title="schemas.contact.ContactUpdate"><span class="pre">ContactUpdate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a></span></span><a class="headerlink" href="#services.contacts.ContactService.update_contact" title="Link to this definition">¶</a></dt>
+<dd><p>Оновлення контакту.</p>
+<p>Повертає:
+Оновлений контакт.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-services.users">
+<span id="contact-book-s-services-users"></span><h1>Contact_book’s services Users<a class="headerlink" href="#module-services.users" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.users.UserService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">services.users.</span></span><span class="sig-name descname"><span class="pre">UserService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.users.UserService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Сервіс для роботи з корисувачами.</p>
+<p>Атрибути:
+- db: Екземпляр сесії бази даних.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.users.UserService.create_new">
+<span class="sig-name descname"><span class="pre">create_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_create</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#schemas.user.User" title="schemas.user.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.user.User" title="schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#services.users.UserService.create_new" title="Link to this definition">¶</a></dt>
+<dd><p>Створити нового користувача.</p>
+<p>Повертає:
+Нового користувача.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.users.UserService.get_by_username">
+<span class="sig-name descname"><span class="pre">get_by_username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.user.User" title="schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#services.users.UserService.get_by_username" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати користувача за імям.</p>
+<p>Повертає:
+Користувача.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.users.UserService.get_user_for_auth">
+<span class="sig-name descname"><span class="pre">get_user_for_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.user.User" title="schemas.user.User"><span class="pre">User</span></a></span></span><a class="headerlink" href="#services.users.UserService.get_user_for_auth" title="Link to this definition">¶</a></dt>
+<dd><p>Отримати користувача для аутентифікації.</p>
+<p>Повертає:
+Користувача за імям.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.users.UserService.update_avatar">
+<span class="sig-name descname"><span class="pre">update_avatar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar_public_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#services.users.UserService.update_avatar" title="Link to this definition">¶</a></dt>
+<dd><p>Оновлення аватару.</p>
+<p>Повертає:
+Оновленого користувача.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.avatar">
+<span id="contact-book-s-api-avatar"></span><h1>Contact_book’s api Avatar<a class="headerlink" href="#module-api.avatar" title="Link to this heading">¶</a></h1>
+<p>Модуль для роботи з аватор користувача.</p>
+<p>Містить роут для обробки аватарів користувачів.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.avatar.update_avatar">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.avatar.</span></span><span class="sig-name descname"><span class="pre">update_avatar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UploadFile</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">File(Ellipsis)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#services.users.UserService" title="services.users.UserService"><span class="pre">UserService</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(NoneType)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.avatar.update_avatar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-api.contact_items">
+<span id="contact-book-s-api-contact-items"></span><h1>Contact_book’s api Contact items<a class="headerlink" href="#module-api.contact_items" title="Link to this heading">¶</a></h1>
+<p>Модуль для визначення API для контактів.</p>
+<p>Містить роути та функції для обробки HTTP-запитів, що стосуються контактів.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.contact_items.create_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.contact_items.</span></span><span class="sig-name descname"><span class="pre">create_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_item:</span> <span class="pre">~schemas.contact.ContactCreate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a></span></span><a class="headerlink" href="#api.contact_items.create_contact" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.contact_items.delete_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.contact_items.</span></span><span class="sig-name descname"><span class="pre">delete_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.contact_items.delete_contact" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.contact_items.get_detail">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.contact_items.</span></span><span class="sig-name descname"><span class="pre">get_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a></span></span><a class="headerlink" href="#api.contact_items.get_detail" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.contact_items.list_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.contact_items.</span></span><span class="sig-name descname"><span class="pre">list_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#api.contact_items.list_contacts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.contact_items.search_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.contact_items.</span></span><span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#api.contact_items.search_contacts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.contact_items.upcoming_birthdays">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.contact_items.</span></span><span class="sig-name descname"><span class="pre">upcoming_birthdays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#schemas.contact.Contact" title="schemas.contact.Contact"><span class="pre">Contact</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#api.contact_items.upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.contact_items.update_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.contact_items.</span></span><span class="sig-name descname"><span class="pre">update_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_update:</span> <span class="pre">~schemas.contact.ContactUpdate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.contact_items.update_contact" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-api.users">
+<span id="contact-book-s-api-users"></span><h1>Contact_book’s api Users<a class="headerlink" href="#module-api.users" title="Link to this heading">¶</a></h1>
+<p>Модуль для визначення API для користувачів.</p>
+<p>Містить роути та функції для обробки HTTP-запитів, що стосуються користувачів.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.users.authenticate_user">
+<span class="sig-prename descclassname"><span class="pre">api.users.</span></span><span class="sig-name descname"><span class="pre">authenticate_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.users.authenticate_user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.users.login_for_access_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.users.</span></span><span class="sig-name descname"><span class="pre">login_for_access_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form_data:</span> <span class="pre">~fastapi.security.oauth2.OAuth2PasswordRequestForm</span> <span class="pre">=</span> <span class="pre">Depends(NoneType)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.users.login_for_access_token" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.users.protected_resource">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.users.</span></span><span class="sig-name descname"><span class="pre">protected_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#schemas.user.User" title="schemas.user.User"><span class="pre">User</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.users.protected_resource" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.users.register">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.users.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user:</span> <span class="pre">~schemas.user.User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.users.register" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.users.verify_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.users.</span></span><span class="sig-name descname"><span class="pre">verify_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_verification:</span> <span class="pre">~schemas.user.UserVerification</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.users.verify_email" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-dependencies.auth">
+<span id="contact-book-s-dependencies-autentification"></span><h1>Contact_book’s dependencies Autentification<a class="headerlink" href="#module-dependencies.auth" title="Link to this heading">¶</a></h1>
+<p>Модуль для аутентифікації.</p>
+<p>Містить функції для створення токенів та перевірки даних користувача.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dependencies.auth.Token">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">Token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'bearer'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dependencies.auth.Token" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dependencies.auth.Token.access_token">
+<span class="sig-name descname"><span class="pre">access_token</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#dependencies.auth.Token.access_token" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dependencies.auth.Token.token_type">
+<span class="sig-name descname"><span class="pre">token_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#dependencies.auth.Token.token_type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dependencies.auth.create_access_token">
+<span class="sig-prename descclassname"><span class="pre">dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">create_access_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dependencies.auth.create_access_token" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dependencies.auth.decode_jwt_token">
+<span class="sig-prename descclassname"><span class="pre">dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">decode_jwt_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dependencies.auth.decode_jwt_token" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dependencies.auth.get_current_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">get_current_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">Depends(OAuth2PasswordBearer)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db:</span> <span class="pre">sessionmaker(class_='Session'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind=Engine(sqlite:///./demo.db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expire_on_commit=True)</span> <span class="pre">=</span> <span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dependencies.auth.get_current_user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dependencies.auth.verify_password">
+<span class="sig-prename descclassname"><span class="pre">dependencies.auth.</span></span><span class="sig-name descname"><span class="pre">verify_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plain_password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hashed_password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">salt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dependencies.auth.verify_password" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-dependencies.database">
+<span id="contact-book-s-dependencies-database"></span><h1>Contact_book’s dependencies Database<a class="headerlink" href="#module-dependencies.database" title="Link to this heading">¶</a></h1>
+<p>Модуль для з’єднання з базою даних.</p>
+<p>Містить функції для створення сесій бази даних та встановлення з’єднання з базою даних.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="dependencies.database.get_db">
+<span class="sig-prename descclassname"><span class="pre">dependencies.database.</span></span><span class="sig-name descname"><span class="pre">get_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dependencies.database.get_db" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Welcome to Contact_book’s documentation!</a></li>
+<li><a class="reference internal" href="#module-repo.contacts">Contact_book’s repositories Contacts</a><ul>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo"><code class="docutils literal notranslate"><span class="pre">ContactRepo</span></code></a><ul>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo.create"><code class="docutils literal notranslate"><span class="pre">ContactRepo.create()</span></code></a></li>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo.delete_by_id"><code class="docutils literal notranslate"><span class="pre">ContactRepo.delete_by_id()</span></code></a></li>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo.get_all"><code class="docutils literal notranslate"><span class="pre">ContactRepo.get_all()</span></code></a></li>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo.get_by_id"><code class="docutils literal notranslate"><span class="pre">ContactRepo.get_by_id()</span></code></a></li>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo.get_upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">ContactRepo.get_upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo.search_contacts"><code class="docutils literal notranslate"><span class="pre">ContactRepo.search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#repo.contacts.ContactRepo.update_by_id"><code class="docutils literal notranslate"><span class="pre">ContactRepo.update_by_id()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-repo.user">Contact_book’s repositories User</a><ul>
+<li><a class="reference internal" href="#repo.user.UserRepo"><code class="docutils literal notranslate"><span class="pre">UserRepo</span></code></a><ul>
+<li><a class="reference internal" href="#repo.user.UserRepo.create"><code class="docutils literal notranslate"><span class="pre">UserRepo.create()</span></code></a></li>
+<li><a class="reference internal" href="#repo.user.UserRepo.generate_salt"><code class="docutils literal notranslate"><span class="pre">UserRepo.generate_salt()</span></code></a></li>
+<li><a class="reference internal" href="#repo.user.UserRepo.get_by_email"><code class="docutils literal notranslate"><span class="pre">UserRepo.get_by_email()</span></code></a></li>
+<li><a class="reference internal" href="#repo.user.UserRepo.get_by_username"><code class="docutils literal notranslate"><span class="pre">UserRepo.get_by_username()</span></code></a></li>
+<li><a class="reference internal" href="#repo.user.UserRepo.get_user_check_pass"><code class="docutils literal notranslate"><span class="pre">UserRepo.get_user_check_pass()</span></code></a></li>
+<li><a class="reference internal" href="#repo.user.UserRepo.hash_password"><code class="docutils literal notranslate"><span class="pre">UserRepo.hash_password()</span></code></a></li>
+<li><a class="reference internal" href="#repo.user.UserRepo.verify_password"><code class="docutils literal notranslate"><span class="pre">UserRepo.verify_password()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-schemas.contact">Contact_book’s schemas Contact</a><ul>
+<li><a class="reference internal" href="#schemas.contact.Contact"><code class="docutils literal notranslate"><span class="pre">Contact</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.contact.Contact.Config"><code class="docutils literal notranslate"><span class="pre">Contact.Config</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.contact.Contact.Config.from_attributes"><code class="docutils literal notranslate"><span class="pre">Contact.Config.from_attributes</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#schemas.contact.Contact.additional_data"><code class="docutils literal notranslate"><span class="pre">Contact.additional_data</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.Contact.birthday"><code class="docutils literal notranslate"><span class="pre">Contact.birthday</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.Contact.email"><code class="docutils literal notranslate"><span class="pre">Contact.email</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.Contact.first_name"><code class="docutils literal notranslate"><span class="pre">Contact.first_name</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.Contact.id"><code class="docutils literal notranslate"><span class="pre">Contact.id</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.Contact.last_name"><code class="docutils literal notranslate"><span class="pre">Contact.last_name</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.Contact.phone_number"><code class="docutils literal notranslate"><span class="pre">Contact.phone_number</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#schemas.contact.ContactCreate"><code class="docutils literal notranslate"><span class="pre">ContactCreate</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.contact.ContactCreate.additional_data"><code class="docutils literal notranslate"><span class="pre">ContactCreate.additional_data</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactCreate.birthday"><code class="docutils literal notranslate"><span class="pre">ContactCreate.birthday</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactCreate.email"><code class="docutils literal notranslate"><span class="pre">ContactCreate.email</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactCreate.first_name"><code class="docutils literal notranslate"><span class="pre">ContactCreate.first_name</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactCreate.last_name"><code class="docutils literal notranslate"><span class="pre">ContactCreate.last_name</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactCreate.phone_number"><code class="docutils literal notranslate"><span class="pre">ContactCreate.phone_number</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#schemas.contact.ContactUpdate"><code class="docutils literal notranslate"><span class="pre">ContactUpdate</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.contact.ContactUpdate.additional_data"><code class="docutils literal notranslate"><span class="pre">ContactUpdate.additional_data</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactUpdate.birthday"><code class="docutils literal notranslate"><span class="pre">ContactUpdate.birthday</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactUpdate.email"><code class="docutils literal notranslate"><span class="pre">ContactUpdate.email</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactUpdate.first_name"><code class="docutils literal notranslate"><span class="pre">ContactUpdate.first_name</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactUpdate.last_name"><code class="docutils literal notranslate"><span class="pre">ContactUpdate.last_name</span></code></a></li>
+<li><a class="reference internal" href="#schemas.contact.ContactUpdate.phone_number"><code class="docutils literal notranslate"><span class="pre">ContactUpdate.phone_number</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-schemas.user">Contact_book’s schemas User</a><ul>
+<li><a class="reference internal" href="#schemas.user.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.user.User.Config"><code class="docutils literal notranslate"><span class="pre">User.Config</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.user.User.Config.from_attributes"><code class="docutils literal notranslate"><span class="pre">User.Config.from_attributes</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#schemas.user.User.avatar_public_id"><code class="docutils literal notranslate"><span class="pre">User.avatar_public_id</span></code></a></li>
+<li><a class="reference internal" href="#schemas.user.User.email"><code class="docutils literal notranslate"><span class="pre">User.email</span></code></a></li>
+<li><a class="reference internal" href="#schemas.user.User.is_verified"><code class="docutils literal notranslate"><span class="pre">User.is_verified</span></code></a></li>
+<li><a class="reference internal" href="#schemas.user.User.password"><code class="docutils literal notranslate"><span class="pre">User.password</span></code></a></li>
+<li><a class="reference internal" href="#schemas.user.User.username"><code class="docutils literal notranslate"><span class="pre">User.username</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#schemas.user.UserUpdate"><code class="docutils literal notranslate"><span class="pre">UserUpdate</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.user.UserUpdate.avatar_url"><code class="docutils literal notranslate"><span class="pre">UserUpdate.avatar_url</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#schemas.user.UserVerification"><code class="docutils literal notranslate"><span class="pre">UserVerification</span></code></a><ul>
+<li><a class="reference internal" href="#schemas.user.UserVerification.token"><code class="docutils literal notranslate"><span class="pre">UserVerification.token</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-models.contact">Contact_book’s models Contact</a><ul>
+<li><a class="reference internal" href="#models.contact.ContactDB"><code class="docutils literal notranslate"><span class="pre">ContactDB</span></code></a><ul>
+<li><a class="reference internal" href="#models.contact.ContactDB.additional_data"><code class="docutils literal notranslate"><span class="pre">ContactDB.additional_data</span></code></a></li>
+<li><a class="reference internal" href="#models.contact.ContactDB.birthday"><code class="docutils literal notranslate"><span class="pre">ContactDB.birthday</span></code></a></li>
+<li><a class="reference internal" href="#models.contact.ContactDB.email"><code class="docutils literal notranslate"><span class="pre">ContactDB.email</span></code></a></li>
+<li><a class="reference internal" href="#models.contact.ContactDB.first_name"><code class="docutils literal notranslate"><span class="pre">ContactDB.first_name</span></code></a></li>
+<li><a class="reference internal" href="#models.contact.ContactDB.id"><code class="docutils literal notranslate"><span class="pre">ContactDB.id</span></code></a></li>
+<li><a class="reference internal" href="#models.contact.ContactDB.last_name"><code class="docutils literal notranslate"><span class="pre">ContactDB.last_name</span></code></a></li>
+<li><a class="reference internal" href="#models.contact.ContactDB.phone_number"><code class="docutils literal notranslate"><span class="pre">ContactDB.phone_number</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-models.users">Contact_book’s models Users</a><ul>
+<li><a class="reference internal" href="#models.users.UsertDB"><code class="docutils literal notranslate"><span class="pre">UsertDB</span></code></a><ul>
+<li><a class="reference internal" href="#models.users.UsertDB.avatar_public_id"><code class="docutils literal notranslate"><span class="pre">UsertDB.avatar_public_id</span></code></a></li>
+<li><a class="reference internal" href="#models.users.UsertDB.email"><code class="docutils literal notranslate"><span class="pre">UsertDB.email</span></code></a></li>
+<li><a class="reference internal" href="#models.users.UsertDB.id"><code class="docutils literal notranslate"><span class="pre">UsertDB.id</span></code></a></li>
+<li><a class="reference internal" href="#models.users.UsertDB.password"><code class="docutils literal notranslate"><span class="pre">UsertDB.password</span></code></a></li>
+<li><a class="reference internal" href="#models.users.UsertDB.salt"><code class="docutils literal notranslate"><span class="pre">UsertDB.salt</span></code></a></li>
+<li><a class="reference internal" href="#models.users.UsertDB.username"><code class="docutils literal notranslate"><span class="pre">UsertDB.username</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-models.base">Contact_book’s models Base</a><ul>
+<li><a class="reference internal" href="#models.base.BaseModel"><code class="docutils literal notranslate"><span class="pre">BaseModel</span></code></a><ul>
+<li><a class="reference internal" href="#models.base.BaseModel.id"><code class="docutils literal notranslate"><span class="pre">BaseModel.id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-services.contacts">Contact_book’s services Contacts</a><ul>
+<li><a class="reference internal" href="#services.contacts.ContactService"><code class="docutils literal notranslate"><span class="pre">ContactService</span></code></a><ul>
+<li><a class="reference internal" href="#services.contacts.ContactService.create_new"><code class="docutils literal notranslate"><span class="pre">ContactService.create_new()</span></code></a></li>
+<li><a class="reference internal" href="#services.contacts.ContactService.delete_contact"><code class="docutils literal notranslate"><span class="pre">ContactService.delete_contact()</span></code></a></li>
+<li><a class="reference internal" href="#services.contacts.ContactService.get_all_contacts"><code class="docutils literal notranslate"><span class="pre">ContactService.get_all_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#services.contacts.ContactService.get_by_id"><code class="docutils literal notranslate"><span class="pre">ContactService.get_by_id()</span></code></a></li>
+<li><a class="reference internal" href="#services.contacts.ContactService.search_contacts"><code class="docutils literal notranslate"><span class="pre">ContactService.search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#services.contacts.ContactService.upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">ContactService.upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#services.contacts.ContactService.update_contact"><code class="docutils literal notranslate"><span class="pre">ContactService.update_contact()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-services.users">Contact_book’s services Users</a><ul>
+<li><a class="reference internal" href="#services.users.UserService"><code class="docutils literal notranslate"><span class="pre">UserService</span></code></a><ul>
+<li><a class="reference internal" href="#services.users.UserService.create_new"><code class="docutils literal notranslate"><span class="pre">UserService.create_new()</span></code></a></li>
+<li><a class="reference internal" href="#services.users.UserService.get_by_username"><code class="docutils literal notranslate"><span class="pre">UserService.get_by_username()</span></code></a></li>
+<li><a class="reference internal" href="#services.users.UserService.get_user_for_auth"><code class="docutils literal notranslate"><span class="pre">UserService.get_user_for_auth()</span></code></a></li>
+<li><a class="reference internal" href="#services.users.UserService.update_avatar"><code class="docutils literal notranslate"><span class="pre">UserService.update_avatar()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.avatar">Contact_book’s api Avatar</a><ul>
+<li><a class="reference internal" href="#api.avatar.update_avatar"><code class="docutils literal notranslate"><span class="pre">update_avatar()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.contact_items">Contact_book’s api Contact items</a><ul>
+<li><a class="reference internal" href="#api.contact_items.create_contact"><code class="docutils literal notranslate"><span class="pre">create_contact()</span></code></a></li>
+<li><a class="reference internal" href="#api.contact_items.delete_contact"><code class="docutils literal notranslate"><span class="pre">delete_contact()</span></code></a></li>
+<li><a class="reference internal" href="#api.contact_items.get_detail"><code class="docutils literal notranslate"><span class="pre">get_detail()</span></code></a></li>
+<li><a class="reference internal" href="#api.contact_items.list_contacts"><code class="docutils literal notranslate"><span class="pre">list_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#api.contact_items.search_contacts"><code class="docutils literal notranslate"><span class="pre">search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#api.contact_items.upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#api.contact_items.update_contact"><code class="docutils literal notranslate"><span class="pre">update_contact()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.users">Contact_book’s api Users</a><ul>
+<li><a class="reference internal" href="#api.users.authenticate_user"><code class="docutils literal notranslate"><span class="pre">authenticate_user()</span></code></a></li>
+<li><a class="reference internal" href="#api.users.login_for_access_token"><code class="docutils literal notranslate"><span class="pre">login_for_access_token()</span></code></a></li>
+<li><a class="reference internal" href="#api.users.protected_resource"><code class="docutils literal notranslate"><span class="pre">protected_resource()</span></code></a></li>
+<li><a class="reference internal" href="#api.users.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li><a class="reference internal" href="#api.users.verify_email"><code class="docutils literal notranslate"><span class="pre">verify_email()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-dependencies.auth">Contact_book’s dependencies Autentification</a><ul>
+<li><a class="reference internal" href="#dependencies.auth.Token"><code class="docutils literal notranslate"><span class="pre">Token</span></code></a><ul>
+<li><a class="reference internal" href="#dependencies.auth.Token.access_token"><code class="docutils literal notranslate"><span class="pre">Token.access_token</span></code></a></li>
+<li><a class="reference internal" href="#dependencies.auth.Token.token_type"><code class="docutils literal notranslate"><span class="pre">Token.token_type</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dependencies.auth.create_access_token"><code class="docutils literal notranslate"><span class="pre">create_access_token()</span></code></a></li>
+<li><a class="reference internal" href="#dependencies.auth.decode_jwt_token"><code class="docutils literal notranslate"><span class="pre">decode_jwt_token()</span></code></a></li>
+<li><a class="reference internal" href="#dependencies.auth.get_current_user"><code class="docutils literal notranslate"><span class="pre">get_current_user()</span></code></a></li>
+<li><a class="reference internal" href="#dependencies.auth.verify_password"><code class="docutils literal notranslate"><span class="pre">verify_password()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-dependencies.database">Contact_book’s dependencies Database</a><ul>
+<li><a class="reference internal" href="#dependencies.database.get_db"><code class="docutils literal notranslate"><span class="pre">get_db()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Contact_book Doctor Who documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to Contact_book’s documentation!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Alya.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
